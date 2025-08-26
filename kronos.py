@@ -2,7 +2,7 @@
 """
     A small and lightweight robot for kronos entity or equivalents to generate signed time milestone.
     Author: projet nebule
-    Version: 020250425
+    Version: 020250826
     Licence: GNU GPL 2010-2025
     Website: www.nebule.org
 """
