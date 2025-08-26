@@ -1,3 +1,12 @@
+#!/usr/bin/python3
+"""
+    A small and lightweight robot for kronos entity or equivalents to generate signed time milestone.
+    Author: projet nebule
+    Version: 020250425
+    Licence: GNU GPL 2010-2025
+    Website: www.nebule.org
+"""
+
 import os
 import sys
 import time
