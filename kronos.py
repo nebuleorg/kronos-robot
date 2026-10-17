@@ -46,25 +46,26 @@ class Robot:
     def get_time(self):
         d = datetime.now()
         self.timestamp = d.strftime('%s')
-        print(f"timestamp={self.timestamp}")
+        #print(f"timestamp={self.timestamp}")
         self.current_date = d.strftime('0%Y%m%d%H%M%S')
-        print(f"date={self.current_date}")
+        #print(f"date={self.current_date}")
 
     def get_link(self):
         s = len(self.timestamp)*4
         bh_bl = blk_generate(f"0>{self.current_date}", 'f', self.RID_TIMESTAMP, f"{self.timestamp}.none.{s}")
+        print(f"bh_bl={bh_bl}")
         return blk_sign(bh_bl)
 
     def __init__(self):
         self.get_args()
         self.get_entity()
-        self.get_time()
-        link = self.get_link()
         while True:
+            self.get_time()
+            link = self.get_link()
             print(f"link={link}")
             if not self.loop:
                 break
-            time.sleep(60)
+            time.sleep(1)
 
 
 # OK, now play...
